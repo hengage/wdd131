@@ -1,0 +1,188 @@
+:root {
+  --primary-blue: #2563eb;
+  --secondary-blue: #1e40af;
+  --accent-teal: #0d9488;
+  --light-gray: #f8fafc;
+  --medium-gray: #e2e8f0;
+  --dark-gray: #334155;
+  --text-dark: #1e293b;
+  --white: #ffffff;
+  --success-green: #059669;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: linear-gradient(
+    135deg,
+    var(--light-gray) 0%,
+    var(--medium-gray) 100%
+  );
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-blue) 0%,
+    var(--secondary-blue) 100%
+  );
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#course-title {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+nav a:hover {
+  background-color: var(--white);
+  color: var(--primary-blue);
+  border-color: var(--white);
+  /* text-decoration: underline; */
+}
+
+main {
+  margin: 2rem auto;
+  padding: 0 2rem;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--primary-blue);
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--medium-gray);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card:first-of-type {
+  background: linear-gradient(135deg, var(--white) 0%, #f0f9ff 100%);
+  border-left: 4px solid var(--accent-teal);
+}
+
+.card:last-of-type {
+  background: linear-gradient(135deg, var(--white) 0%, #f0fdf4 100%);
+  border-left: 4px solid var(--success-green);
+}
+
+.card h2 {
+  font-family: "Playfair Display", serif;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.card img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1rem 0;
+  display: block;
+}
+
+.card p,
+.card li {
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  padding-left: 1.5rem;
+}
+
+.card a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.card a:hover {
+  color: var(--accent-teal);
+  border-bottom-color: var(--accent-teal);
+}
+
+footer {
+  background: linear-gradient(
+    135deg,
+    var(--dark-gray) 0%,
+    var(--text-dark) 100%
+  );
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1.6fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  h1 {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    height: fit-content;
+  }
+}
