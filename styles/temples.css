@@ -1,0 +1,242 @@
+:root {
+  --primary-color: #4a6fa5;
+  --secondary-color: #166088;
+  --accent-color: #4fc3dc;
+  --background-color: #f0f4f7;
+  --text-color: #333;
+  --card-bg: #ffffff;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 1rem;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* Mobile Navigation */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  margin: 1rem auto;
+  z-index: 1000;
+}
+
+/* Hamburger lines */
+.menu-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+/* Position each line */
+.menu-icon span:nth-child(1) {
+  top: 0;
+}
+
+.menu-icon span:nth-child(2) {
+  top: 8px;
+}
+
+.menu-icon span:nth-child(3) {
+  top: 16px;
+}
+
+/* Animate to X when menu is open */
+.menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+  top: 8px;
+  transform: rotate(135deg);
+}
+
+.menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+  opacity: 0;
+  left: -20px;
+}
+
+.menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+  top: 8px;
+  transform: rotate(-135deg);
+}
+
+/* Navigation Menu */
+.nav-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-toggle:checked ~ .nav-menu {
+  max-height: 500px; /* Adjust based on your content */
+  padding: 0.5rem 0;
+}
+
+.nav-menu li {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--accent-color);
+}
+
+/* Hide the checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Navigation container */
+.nav-container {
+  position: relative;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Adjust menu icon position */
+.menu-icon {
+  margin: 0;
+  order: 2; /* Move to the right side */
+}
+
+/* Position the menu below the header */
+.nav-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  margin-top: 0.5rem;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Main content */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+  width: 100%;
+}
+
+/* Grid layout for temple cards */
+.temples-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.temple-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.temple-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.temple-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.temple-info {
+  padding: 1rem;
+}
+
+.temple-info h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.temple-info p {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .temples-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav a {
+    display: block;
+    padding: 0.5rem;
+  }
+}

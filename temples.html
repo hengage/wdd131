@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="WDD 131 - Picture Album by Henry Chizoba Udeh"
+    />
+    <meta name="author" content="Henry Udeh" />
+    <title>
+      WDD 131 - Dynamic Web Fundamentals | Picture Album - Henry Chizoba Udeh
+    </title>
+    <link rel="stylesheet" href="styles/temples.css" />
+    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 768px)" />
+  </head>
+  <body>
+    <header>
+      <h1>Temple Album</h1>
+
+      <nav class="nav-container">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="nav-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Old</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Large</a></li>
+          <li><a href="#">Small</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="temples-grid">
+        <div class="temple-card">
+          <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/800x500/aba-nigeria-temple-lds-273999-wallpaper.jpg" alt="Aba Nigeria Temple" class="temple-image">
+          <div class="temple-info">
+            <h2>Aba Nigeria Temple</h2>
+            <p>Location: Aba, Nigeria</p>
+            <p>Dedicated: August 7, 2005</p>
+          </div>
+        </div>
+        
+        <div class="temple-card">
+          <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/800x500/accra-ghana-temple-detail-249022-2400x1200.jpg" alt="Accra Ghana Temple" class="temple-image">
+          <div class="temple-info">
+            <h2>Accra Ghana Temple</h2>
+            <p>Location: Accra, Ghana</p>
+            <p>Dedicated: January 11, 2004</p>
+          </div>
+        </div>
+        
+        <div class="temple-card">
+          <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/apia-samoa/800x500/apia-samoa-temple-lds-460475-wallpaper.jpg" alt="Apia Samoa Temple" class="temple-image">
+          <div class="temple-info">
+            <h2>Apia Samoa Temple</h2>
+            <p>Location: Apia, Samoa</p>
+            <p>Rededicated: September 4, 2005</p>
+          </div>
+        </div>
+        
+        <div class="temple-card">
+          <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/arequipa-peru/800x500/1-1c4a2c5e13f7b3fe3b9d9f0c9f0b9a0a/arequipa-peru-temple-lds-1062055-wallpaper.jpg" alt="Arequipa Peru Temple" class="temple-image">
+          <div class="temple-info">
+            <h2>Arequipa Peru Temple</h2>
+            <p>Location: Arequipa, Peru</p>
+            <p>Dedicated: December 15, 2019</p>
+          </div>
+        </div>
+        
+        <div class="temple-card">
+          <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/asuncion-paraguay/800x500/10-5d0a5f0b9e0d4c1c9e0b9f0c9f0b9a0a.jpg" alt="Asunción Paraguay Temple" class="temple-image">
+          <div class="temple-info">
+            <h2>Asunción Paraguay Temple</h2>
+            <p>Location: Asunción, Paraguay</p>
+            <p>Dedicated: May 19, 2002</p>
+          </div>
+        </div>
+        
+        <div class="temple-card">
+          <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/atlanta-georgia/800x500/atlanta-georgia-temple-lds-945541-wallpaper.jpg" alt="Atlanta Georgia Temple" class="temple-image">
+          <div class="temple-info">
+            <h2>Atlanta Georgia Temple</h2>
+            <p>Location: Sandy Springs, Georgia, USA</p>
+            <p>Dedicated: June 1, 1983</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="currentYear"></span> | Henry Chizoba Udeh | WDD 131</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+    
+    <script>
+      // Update year and last modified date
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+      document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+  </body>
+</html>
