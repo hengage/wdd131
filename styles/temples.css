@@ -161,16 +161,6 @@ h1 {
   order: 2; /* Move to the right side */
 }
 
-/* Position the menu below the header */
-.nav-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 200px;
-  margin-top: 0.5rem;
-  z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 /* Main content */
 main {
