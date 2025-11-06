@@ -5,8 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Toggle menu function
   function toggleMenu() {
-    menuButton.classList.toggle('open');
-    navMenu.classList.toggle('show');
+    const isOpen = menuButton.classList.contains('open');
+    
+    // Toggle the open class on the button
+    if (isOpen) {
+      menuButton.classList.remove('open');
+      navMenu.classList.remove('show');
+    } else {
+      menuButton.classList.add('open');
+      navMenu.classList.add('show');
+    }
   }
 
   // Close menu when clicking on a menu item (for mobile)
@@ -28,12 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add event listeners
   if (menuButton) {
-    menuButton.addEventListener('click', toggleMenu);
+    menuButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleMenu();
+    });
   }
 
-  menuItems.forEach(item => {
-    item.addEventListener('click', handleMenuItemClick);
-  });
+  if (menuItems.length > 0) {
+    menuItems.forEach(item => {
+      item.addEventListener('click', handleMenuItemClick);
+    });
+  }
 
   // Initialize menu state
   handleResize();
