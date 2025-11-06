@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #4a6fa5;
+  --primary-color: #3c0a64;
   --secondary-color: #166088;
   --accent-color: #4fc3dc;
   --background-color: #f0f4f7;
@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -40,22 +40,80 @@ h1 {
   padding: 0 1rem;
 }
 
-/* Mobile Navigation */
-.menu-toggle {
-  display: none;
-}
-
+/* Menu Toggle Button */
 .menu-icon {
-  display: block;
-  position: relative;
+  display: none; /* Hidden by default, shown on mobile */
   width: 30px;
-  height: 20px;
+  height: 24px;
+  position: relative;
   cursor: pointer;
-  margin: 1rem auto;
-  z-index: 1000;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 1001;
+  margin-left: auto;
 }
 
-/* Hamburger lines */
+/* Mobile menu styles */
+.menu-icon {
+  display: none; /* Hidden by default, shown on mobile */
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  margin-left: auto;
+  z-index: 1001;
+}
+
+.menu-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--primary-color);
+    width: 200px;
+    border-radius: 0 0 8px 8px;
+    padding: 1rem;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .nav-menu.show {
+    display: block;
+  }
+  
+  .nav-menu li {
+    margin: 0.5rem 0;
+  }
+  
+  .menu-icon.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menu-icon.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-icon.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
 .menu-icon span {
   display: block;
   position: absolute;
@@ -66,7 +124,7 @@ h1 {
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
-  transition: .25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 /* Position each line */
@@ -82,51 +140,52 @@ h1 {
   top: 16px;
 }
 
-/* Animate to X when menu is open */
-.menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+/* Menu open state */
+.menu-icon.open span:nth-child(1) {
   top: 8px;
   transform: rotate(135deg);
 }
 
-.menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+.menu-icon.open span:nth-child(2) {
   opacity: 0;
   left: -20px;
 }
 
-.menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+.menu-icon.open span:nth-child(3) {
   top: 8px;
   transform: rotate(-135deg);
 }
 
-/* Navigation Menu */
+/* Navigation Menu - Mobile */
 .nav-menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  background-color: var(--secondary-color);
-  border-radius: 8px;
-  margin: 0;
-  padding: 0;
   list-style: none;
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 1rem;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--primary-color);
+  width: 200px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 0.5rem;
+  z-index: 1000;
 }
 
 .menu-toggle:checked ~ .nav-menu {
-  max-height: 500px; /* Adjust based on your content */
-  padding: 0.5rem 0;
-}
-
-.nav-menu li {
-  text-align: center;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 
 .nav-menu a {
-  display: block;
   color: white;
   text-decoration: none;
-  padding: 0.8rem 1rem;
-  transition: all 0.3s ease;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: block;
+  padding: 0.5rem 0;
 }
 
 .nav-menu a:hover {
@@ -161,7 +220,7 @@ h1 {
   width: 200px;
   margin-top: 0.5rem;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Main content */
@@ -170,6 +229,13 @@ main {
   margin: 0 auto;
   padding: 0 1rem 2rem;
   width: 100%;
+}
+
+.home-title {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 
 /* Grid layout for temple cards */
@@ -229,12 +295,12 @@ footer {
   .temples-grid {
     grid-template-columns: 1fr;
   }
-  
+
   nav ul {
     flex-direction: column;
     align-items: center;
   }
-  
+
   nav a {
     display: block;
     padding: 0.5rem;
