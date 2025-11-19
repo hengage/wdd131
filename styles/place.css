@@ -16,7 +16,8 @@
 }
 
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Open Sans", "Segoe UI", Roboto, Tahoma, Geneva, Verdana,
+    sans-serif;
 }
 
 .place-title {
