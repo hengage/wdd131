@@ -34,7 +34,7 @@
 .hero img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   display: block;
 }
 
@@ -55,7 +55,6 @@
 
 .card h2 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
   color: var(--color-black);
   padding-bottom: 0.5rem;
 }
@@ -74,11 +73,35 @@ footer {
   color: var(--color-white);
   background-color: var(--color-black);
 }
+
 footer .country-name {
   display: block;
 }
 
 @media (min-width: 768px) {
+  .card {
+    width: 50%;
+    max-width: 400px;
+    margin: 2rem 2rem;
+  }
+
+  .card > div:first-of-type {
+    background: var(--color-gold);
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .main {
+    position: absolute;
+  }
+
+  .weather {
+    position: relative;
+    bottom: 8rem;
+    left: 60%;
+  }
+
   .weather-icon {
     display: none;
   }
@@ -92,5 +115,11 @@ footer .country-name {
 
   footer .country-name {
     display: inline;
+  }
+}
+
+@media (min-width: 1324px) {
+  .weather {
+    left: 70%;
   }
 }
