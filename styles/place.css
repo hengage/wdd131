@@ -93,7 +93,7 @@ footer .country-name {
 
 @media (min-width: 768px) {
   .card {
-    width: 50%;
+    width: 30%;
     max-width: 400px;
     margin: 2rem 2rem;
     display: block;
@@ -144,7 +144,11 @@ footer .country-name {
 }
 
 @media (min-width: 1324px) {
+  .card {
+    width: 50%;
+    max-width: 500px;
+  }
   .weather {
-    left: 70%;
+    left: 60%;
   }
 }
