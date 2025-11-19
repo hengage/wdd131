@@ -56,7 +56,7 @@
 .card h2 {
   font-size: 1.5rem;
   color: var(--color-black);
-  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .weather-icon {
@@ -64,6 +64,12 @@
   height: auto;
   display: block;
   margin-bottom: 1rem;
+}
+
+.data-content,
+.weather-info {
+  text-align: center;
+  line-height: 2.2rem;
 }
 
 footer {
@@ -83,17 +89,29 @@ footer .country-name {
     width: 50%;
     max-width: 400px;
     margin: 2rem 2rem;
+    display: block;
+    padding: 0%;
+    padding-bottom: 3rem;
   }
 
   .card > div:first-of-type {
     background: var(--color-gold);
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 0;
+    padding-left: 2.4rem;
     margin-bottom: 1.2rem;
+    position: relative;
+    top: 0.5rem;
+    right: 1.7rem;
   }
 
   .main {
     position: absolute;
+  }
+
+  .data {
+    position: relative;
+    left: 2rem;
   }
 
   .weather {
