@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="WDD 131 - Week 3 | Country Page by Henry Chizoba Udeh"
+    />
+    <meta name="author" content="Henry Udeh" />
+    <title>Germany</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/place.css" />
+    <script src="scripts/place.js" defer></script>
+  </head>
+  <body>
+    <header class="place-title">
+      <h1>Germany</h1>
+    </header>
+
+    <section class="hero">
+      <picture>
+        <!-- Small screen -->
+        <source
+          srcset="images/country-page/brandenburg-gate-small.webp"
+          media="(max-width: 600px)"
+        />
+        <!-- Medium screen -->
+        <source
+          srcset="images/country-page/brandenburg-gate-medium.webp"
+          media="(max-width: 1024px)"
+        />
+        <!-- Large screen -->
+        <img
+          src="images/country-page/brandenburg-gate.webp"
+          alt="Brandenburg Gate in Berlin"
+        />
+      </picture>
+    </section>
+
+    <main>
+      <section class="data card">
+        <div class="">
+          <h2>Data</h2>
+        </div>
+
+        <div class="data-content">
+          <p>Area: 357,114 sq km</p>
+          <p>Population: 84,500,000</p>
+          <p>Capital: Berlin</p>
+          <p>Languages: German</p>
+          <p>Currency: Euro (€)</p>
+          <p>Time Zone: UTC+1</p>
+          <p>Calling Code: +49</p>
+          <p>Internet TLD: .de</p>
+        </div>
+      </section>
+
+      <section class="weather card">
+        <div class="">
+          <h2>Weather</h2>
+        </div>
+        <img
+          src="/images/country-page/weather_symbol.svg"
+          class="weather-icon"
+          alt="weather icon"
+        />
+
+        <div class="weather-info">
+          <p>Temperature: <span id="temperature">45°F</span></p>
+          <p>Conditions: <span id="conditions">Partly Cloudy</span></p>
+          <p>Wind Speed: <span id="windSpeed">5 mph</span></p>
+          <p>Wind Chill: <span id="windchill">Calculating...</span></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span id="year"></span> 🌸 Henry Chizoba Udeh
+        <span class="country-name">🌸 Germany</span>
+      </p>
+
+      <p>Last Modified:<span id="lastModified"> </span></p>
+    </footer>
+  </body>
+</html>
