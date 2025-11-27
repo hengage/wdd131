@@ -90,7 +90,7 @@ function displayTemples(filteredTemples) {
     templesGrid.innerHTML += `
       <section class="temple-card">
         <h2>${temple.templeName}</h2>
-        <img src="${temple.imageUrl}" alt="Image of ${temple.templeName} Temple" loading="lazy"/>
+        <img src="${temple.imageUrl}" class="temple-image" alt="Image of ${temple.templeName} Temple" loading="lazy"/>
         <p><strong>Location:</strong> ${temple.location}</p>
         <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
         <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
