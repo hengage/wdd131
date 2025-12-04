@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta
+      name="description"
+      content="WDD 131 - Dynamic Web Fundamentals | Product Review Form by Henry Chizoba Udeh"
+    />
+    <title>Product Review Form</title>
+    <script src="scripts/product-review.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+            
+            <label for="reviewer-name">Your Name (Optional):</label>
+            <input type="text" id="reviewer-name" name="reviewer-name">
+
+            <label for="reviewer-email">Email:</label>
+            <input type="email" id="reviewer-email" name="reviewer-email" required>
+
+            <label for="product">Product<span>*</span>:</label>
+
+            <select name="product" id="product" required>
+                <option value="" disabled selected>Select a product</option>
+                
+            </select>
+
+            <label for="rating">Rating<span>*</span>:</label>
+            <input type="radio" id="one-star" name="rating" value="1" required>
+            <input type="radio" id="two-star" name="rating" value="2" required>
+            <input type="radio" id="three-star" name="rating" value="3" required>
+            <input type="radio" id="four-star" name="rating" value="4" required>
+            <input type="radio" id="five-star" name="rating" value="5" required>
+
+            <label for="installation-date">Date of Installation<span>*</span>:</label>
+            <input type="date" id="installation-date" name="installation-date" required>
+
+            <label for="useful-features">Which features were most useful?
+                <span>Check all that apply</span>
+            </label>
+            <div class="checkbox-group">
+                <div>
+                    <input type="checkbox" id="easy-nav" name="features" value="easy-nav">
+                    <label for="easy-nav">Easy to navigate</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="visually-appealing" name="features" value="visually-appealing">
+                    <label for="visually-appealing">Visually appealing</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="good-content" name="features" value="good-content">
+                    <label for="good-content">Good content</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="good-resources" name="features" value="good-resources">
+                    <label for="good-resources">Good resources</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="other-feature" name="features" value="other">
+                    <label for="other-feature">Other</label>
+                </div>
+            </div>
+
+            <label for="review">Review (optional):</label>
+            <textarea id="review" name="review"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Henry Chizoba Udeh</p>
+    </footer>
+</body>
+</html>
