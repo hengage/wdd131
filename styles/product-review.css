@@ -1,0 +1,313 @@
+/* Base Styles */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --background-color: #f5f6fa;
+    --text-color: #2c3e50;
+    --border-color: #ddd;
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+/* Form Layout */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+label span {
+    color: var(--accent-color);
+    margin-left: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="date"] {
+    width: 200px;
+    padding: 0.9rem 0.75rem;
+    height: 50px;
+    font-size: 1.05rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Radio Buttons - Mobile First */
+.rating-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    background: #f8f9fa;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.rating-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    flex: 1 0 calc(20% - 0.25rem);
+    padding: 0.25rem 0.3rem;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding-top: 1.5rem;
+}
+
+.rating-item input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.rating-item label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    font-size: 0.75rem;
+    color: var(--text-color);
+    text-align: center;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    padding-left: 1.25rem;
+}
+
+.rating-item label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    background: white;
+    transition: all 0.2s ease;
+}
+
+.rating-item label::after {
+    content: '★';
+    color: #ffd700;
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
+    order: -1;
+}
+
+.rating-item input[type="radio"]:checked + label::before {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: inset 0 0 0 2px white;
+}
+
+.rating-item input[type="radio"]:focus-visible + label::before {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    .rating-container {
+        gap: 0.5rem;
+        padding: 0.75rem;
+    }
+    
+    .rating-item {
+        padding: 0.4rem 0.6rem 0.4rem 1.75rem;
+        min-width: 100px;
+        flex: 1;
+    }
+    
+    .rating-item label {
+        flex-direction: row;
+        font-size: 0.9rem;
+        gap: 0.5rem;
+        padding-left: 0;
+    }
+    
+    .rating-item label::before {
+        position: static;
+        transform: none;
+        margin-right: 0;
+        flex-shrink: 0;
+    }
+    
+    .rating-item:hover {
+        border-color: var(--primary-color);
+        background-color: #f0f7ff;
+    }
+    
+    .rating-item input[type="radio"]:checked + label {
+        font-weight: 600;
+    }
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.checkbox-group > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Button */
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-color);
+    filter: brightness(0.9);
+}
+
+/* Required Field Note */
+.required-note {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 1rem;
+    text-align: right;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    .rating-container {
+        flex-wrap: wrap;
+    }
+    
+    .rating-container label {
+        flex: 1 0 45%;
+    }
+}
+
+/* Form Validation */
+input:required:invalid,
+select:required:invalid,
+input[type="date"]:required:invalid {
+    border-left: 3px solid var(--error-color);
+}
+
+input:required:valid,
+select:required:valid,
+input[type="date"]:required:valid {
+    border-left: 3px solid var(--success-color);
+}
+
+/* Focus States */
+*:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}

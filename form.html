@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <meta
+    <meta
       name="description"
       content="WDD 131 - Dynamic Web Fundamentals | Product Review Form by Henry Chizoba Udeh"
     />
+    <link rel="stylesheet" href="styles/product-review.css">
     <title>Product Review Form</title>
     <script src="scripts/product-review.js" defer></script>
 </head>
@@ -17,6 +18,7 @@
 
     <main>
         <form method="get" action="review.html">
+            <p class="required-note">* All fields marked with an asterisk are required.</p>
             
             <label for="reviewer-name">Your Name (Optional):</label>
             <input type="text" id="reviewer-name" name="reviewer-name">
@@ -31,12 +33,29 @@
                 
             </select>
 
-            <label for="rating">Rating<span>*</span>:</label>
-            <input type="radio" id="one-star" name="rating" value="1" required>
-            <input type="radio" id="two-star" name="rating" value="2" required>
-            <input type="radio" id="three-star" name="rating" value="3" required>
-            <input type="radio" id="four-star" name="rating" value="4" required>
-            <input type="radio" id="five-star" name="rating" value="5" required>
+            <label>Rating<span>*</span>:</label>
+            <div class="rating-container">
+                <div class="rating-item">
+                    <input type="radio" id="one-star" name="rating" value="1" required>
+                    <label for="one-star">1</label>
+                </div>
+                <div class="rating-item">
+                    <input type="radio" id="two-star" name="rating" value="2" required>
+                    <label for="two-star">2</label>
+                </div>
+                <div class="rating-item">
+                    <input type="radio" id="three-star" name="rating" value="3" required>
+                    <label for="three-star">3</label>
+                </div>
+                <div class="rating-item">
+                    <input type="radio" id="four-star" name="rating" value="4" required>
+                    <label for="four-star">4</label>
+                </div>
+                <div class="rating-item">
+                    <input type="radio" id="five-star" name="rating" value="5" required>
+                    <label for="five-star">5</label>
+                </div>
+            </div>
 
             <label for="installation-date">Date of Installation<span>*</span>:</label>
             <input type="date" id="installation-date" name="installation-date" required>
