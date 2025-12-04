@@ -46,7 +46,29 @@ function selectRatingStar() {
     });
 }
 
-populateProductSelect();
+// Initialize the page when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Populate product select dropdown on form page
+    if (document.getElementById('product')) {
+        populateProductSelect();
+    }
+    
+    // Update review counter on review page
+    const reviewCounter = document.getElementById('review-counter');
+    if (reviewCounter) {
+        // Get the current count from localStorage or initialize to 0
+        let reviewCount = parseInt(localStorage.getItem('reviewCount')) || 0;
+        
+        // Increment the counter
+        reviewCount++;
+        
+        // Save the updated count back to localStorage
+        localStorage.setItem('reviewCount', reviewCount);
+        
+        // Display the count
+        reviewCounter.textContent = reviewCount;
+    }
+});
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
