@@ -1,0 +1,116 @@
+/* Header and Navigation styling*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Default state */
+.nav-icon {
+  display: block;
+}
+
+.close-icon {
+  display: none;
+}
+
+/* When nav is active */
+.active .nav-icon {
+  display: none;
+}
+
+.active .close-icon {
+  display: block;
+}
+
+.nav-menu {
+  display: none;
+}
+
+.nav-menu li {
+  list-style: none;
+}
+
+.nav {
+  position: relative; /* Makes this the positioning context for absolute children */
+}
+
+.nav-menu {
+  display: none;
+  background: #001f3f;
+  min-width: 250px;
+  position: absolute;
+  top: 3.5rem;
+  right: -0.2rem;
+  z-index: 1000;
+}
+
+/* When menu is active */
+.active .nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
+  padding: 2rem 1rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Desktop styles */
+@media (min-width: 700px) {
+  .nav-toggle {
+    display: none; /* Hide the mobile menu toggle button on desktop */
+  }
+
+  .nav-menu {
+    position: static; /* Reset absolute positioning */
+    display: flex; /* Override the display: none */
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    background: transparent;
+    padding: 0;
+    min-width: auto;
+  }
+
+  .nav-menu a {
+    color: #333;
+    padding: 0.5rem 0;
+    position: relative;
+  }
+
+  .nav-menu a:hover {
+    color: #0066cc;
+  }
+
+  .nav-menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0066cc;
+    transition: width 0.3s ease;
+  }
+
+  .nav-menu a:hover::after {
+    width: 100%;
+  }
+
+  /* Style the CV button differently */
+  .nav-menu .cta-button {
+    background: #0066cc;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+
+  .nav-menu .cta-button:hover {
+    background: #0052a3;
+    color: white;
+  }
+}

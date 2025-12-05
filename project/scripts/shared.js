@@ -18,8 +18,10 @@ function loadHeader() {
             width="100"
             height="100"
             loading="lazy">
-        <nav>
-            <button class="nav-toggle" aria-label="Toggle navigation">
+
+        <nav class="nav" styl="border: 2px solid blue">
+            <button class="nav-toggle" aria-label="Toggle navigation"
+            styl="border: 2px dotted black">
                 <img src="images/navigation-bar.png" alt="Navigation Menu"
                     width="40"
                     height="50"
@@ -31,14 +33,22 @@ function loadHeader() {
                     loading="lazy"
                     class="close-icon">
             </button>
-        </nav>
+            <ul class="nav-menu" styl="border: 2px solid gray">
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#cv" class="cta-button">View CV</a></li>
+            </ul>
+            </nav>
     `;
 
     // Add click handler for mobile menu toggle
     const navToggle = header.querySelector('.nav-toggle');
     if (navToggle) {
         navToggle.addEventListener('click', () => {
-            navToggle.classList.toggle('active');
+            const nav = header.querySelector('.nav');
+            nav.classList.toggle('active');
+            // navToggle.classList.toggle('active');
         });
     }
 }
