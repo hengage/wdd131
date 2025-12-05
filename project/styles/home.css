@@ -1,8 +1,25 @@
+:root {
+  /* Color Scheme */
+  --primary-color: #001f3f; /* Classic dark navy */
+  --accent-color: #06b6d4; /* Bright cyan */
+  --background-color: #f3f4f6; /* Light gray */
+  --text-color: #1f2937; /* Dark gray for text */
+  --text-light: #ffffff; /* White text for dark backgrounds */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Header and Navigation styling*/
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
+  padding-right: 1rem;
 }
 
 /* Default state */
@@ -37,7 +54,7 @@ header {
 
 .nav-menu {
   display: none;
-  background: #001f3f;
+  background: var(--primary-color);
   min-width: 250px;
   position: absolute;
   top: 3.5rem;
@@ -55,11 +72,15 @@ header {
 
 .nav-menu a {
   text-decoration: none;
-  color: white;
+  color: var(--text-light);
 }
 
 /* Desktop styles */
 @media (min-width: 700px) {
+  header {
+    padding: 0 3rem;
+  }
+
   .nav-toggle {
     display: none; /* Hide the mobile menu toggle button on desktop */
   }
@@ -69,20 +90,20 @@ header {
     display: flex; /* Override the display: none */
     flex-direction: row;
     align-items: center;
-    gap: 2rem;
+    gap: 3.2rem;
     background: transparent;
     padding: 0;
     min-width: auto;
   }
 
   .nav-menu a {
-    color: #333;
+    color: var(--text-color);
     padding: 0.5rem 0;
     position: relative;
   }
 
   .nav-menu a:hover {
-    color: #0066cc;
+    color: var(--accent-color);
   }
 
   .nav-menu a::after {
@@ -92,7 +113,7 @@ header {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #0066cc;
+    background-color: var(--accent-color);
     transition: width 0.3s ease;
   }
 
@@ -102,15 +123,15 @@ header {
 
   /* Style the CV button differently */
   .nav-menu .cta-button {
-    background: #0066cc;
-    color: white;
+    background: var(--accent-color);
+    color: var(--text-light);
     padding: 0.5rem 1.5rem;
     border-radius: 4px;
     transition: background 0.3s ease;
   }
 
   .nav-menu .cta-button:hover {
-    background: #0052a3;
-    color: white;
+    background: var(--primary-color);
+    color: var(--text-light);
   }
 }
