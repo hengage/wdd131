@@ -5,12 +5,22 @@
   --background-color: #f3f4f6; /* Light gray */
   --text-color: #1f2937; /* Dark gray for text */
   --text-light: #ffffff; /* White text for dark backgrounds */
+  --darkslategray: #4b5563;
+  --border-gray: #e5e7eb;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 /* Header and Navigation styling*/
@@ -44,10 +54,6 @@ header {
   display: none;
 }
 
-.nav-menu li {
-  list-style: none;
-}
-
 .nav {
   position: relative; /* Makes this the positioning context for absolute children */
 }
@@ -71,8 +77,32 @@ header {
 }
 
 .nav-menu a {
-  text-decoration: none;
   color: var(--text-light);
+}
+
+/* Footer styling */
+
+footer {
+  background-color: var(--primary-color);
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+  gap: 2rem;
+}
+
+footer ul i,
+footer p {
+  font-size: 1.5rem;
+  color: var(--border-gray);
+}
+
+footer ul i:hover {
+  color: var(--accent-color);
 }
 
 /* Space utilities */
