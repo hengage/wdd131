@@ -81,19 +81,23 @@ h1 {
   width: 100%;
 }
 
+/* About Me Styles */
 .about-me {
   background-color: var(--background-color);
   padding: 4rem 1rem;
 }
 
-.about-me div:nth-child(1) {
+.about-me .about {
+  text-align: center;
+}
+
+.about-me .about {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.about-me div:nth-child(1) p {
-  padding: 0 1.2rem;
+.about-me .about p {
   font-size: 1.3rem;
   font-weight: 100;
   color: var(--darkslategray);
@@ -167,5 +171,26 @@ h1 {
 
   .intro .container div {
     width: 650px;
+  }
+
+  .about-me .about {
+    padding: 0 4rem;
+    text-align: center;
+  }
+
+  .about p {
+    padding: 0 5.2rem;
+  }
+
+  .about-me ul {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 3rem;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about-me ul li {
+    flex-basis: 5%;
   }
 }
