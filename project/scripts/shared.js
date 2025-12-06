@@ -34,7 +34,7 @@ function loadHeader() {
                     class="close-icon">
             </button>
             <ul class="nav-menu" styl="border: 2px solid gray">
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="skills.html">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact Me</a></li>
                 <li><a href="#cv" class="cta-button">View My CV</a></li>
