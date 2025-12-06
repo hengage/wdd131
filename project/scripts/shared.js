@@ -37,7 +37,7 @@ function loadHeader() {
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact Me</a></li>
-                <li><a href="#cv" class="cta-button">View CV</a></li>
+                <li><a href="#cv" class="cta-button">View My CV</a></li>
             </ul>
             </nav>
     `;
