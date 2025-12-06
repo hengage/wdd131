@@ -6,6 +6,7 @@
     <meta name="description" content="WDD 131 Project - Home" />
     <meta name="author" content="Henry Chizoba Udeh" />
     <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/home.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -14,13 +15,13 @@
     <script src="scripts/shared.js" defer></script>
   </head>
   <body>
-    <header styl="border: 1px solid red">
+    <header>
       <!-- Header content will be loaded by shared.js -->
     </header>
 
-    <main>
-      <section>
-        <div class="">
+    <main class="space-y-20">
+      <section class="intro space-y-8">
+        <div class="" styl="border: 1px solid red">
           <img
             src="images/cartoon-photo.png"
             alt="photo"
@@ -28,23 +29,27 @@
             height="150"
             loading="lazy"
           />
-          <h1>Henry Chizoba Udeh</h1>
-          <p>Software Engineer</p>
 
-          <p>
+          <h1>Henry Chizoba</h1>
+          <p class="title">Software Engineer</p>
+
+          <p class="description" styl="border: 1px dashed red">
             Passionate about creating innovative, user-friendly software
             solutions and building scalable applications with modern technology.
           </p>
         </div>
 
-        <div class="">
-          <a href="">View My Work</a>
-          <a href="">Contact Me</a>
+        <div
+          class="action-buttons space-y-2"
+          styl="border: 1px dotted darkblue"
+        >
+          <a href="" class="view-my-work">View My Work</a>
+          <a href="" class="contact-me">Contact Me</a>
         </div>
       </section>
 
-      <section>
-        <div class="">
+      <section class="about-me space-y-12">
+        <div class="space-y-4">
           <h2>About Me</h2>
           <p>
             With 4+ years of experience in software engineering, I specialize in
@@ -54,33 +59,35 @@
         </div>
 
         <div class="">
-          <ul>
-            <li>
+          <ul class="space-y-2 md:space-y-0">
+            <li class="">
               <h3>Full-Stack Development</h3>
               <p>
                 Building end-to-end solutions with modern frameworks and
                 technologies.
               </p>
             </li>
-            <li>
+
+            <li class="space-y-4">
               <h3>Responsive Design</h3>
               <p>
                 Creating seamless experiences across all devices and platforms.
               </p>
             </li>
-            <li>
+
+            <li class="space-y-4">
               <h3>Database Management</h3>
               <p>
-                Designing efficient data structures and optimizing performance.
+                Designing efficient data structures, tables, and optimizing
+                performance.
               </p>
             </li>
-            <li>
+            <li class="space-y-4">
               <h3>Backend Development</h3>
               <p>
-                Building robust, secure, and scalable backend systems is my core
-                strength. Across multiple roles, I’ve designed and implemented
-                server-side logic, microservices, and APIs that power reliable,
-                high-performance web and mobile applications.
+                Across multiple roles, I've designed and implemented server-side
+                logic and APIs that power reliable, high-performance web and
+                mobile applications.
               </p>
             </li>
           </ul>
