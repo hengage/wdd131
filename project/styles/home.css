@@ -56,6 +56,7 @@ h1 {
 .intro .action-buttons {
   width: 90%;
   margin: 0 auto;
+  margin-top: 3rem;
 }
 
 .intro .action-buttons a {
@@ -127,4 +128,44 @@ h1 {
 .about-me li p {
   font-size: 1rem;
   color: var(--darkslategray);
+}
+
+@media (min-width: 768px) {
+  main {
+    margin-top: 2rem;
+  }
+  .intro .container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .intro .container div {
+    width: 400px;
+    /* height: 250px; */
+    align-items: self-start;
+  }
+
+  .intro img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .intro .action-buttons {
+    width: 40%;
+    /* margin: 0 auto; */
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    margin-top: 3rem;
+  }
+
+  .intro .container {
+    gap: 6rem;
+  }
+
+  .intro .container div {
+    width: 650px;
+  }
 }
