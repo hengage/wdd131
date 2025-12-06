@@ -170,7 +170,7 @@ h1 {
   }
 
   .intro .container div {
-    width: 650px;
+    width: 550px;
   }
 
   .about-me .about {
@@ -192,5 +192,11 @@ h1 {
 
   .about-me ul li {
     flex-basis: 5%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .intro .container div {
+    width: 650px;
   }
 }
