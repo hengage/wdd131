@@ -9,6 +9,23 @@
   --darkslategray: #4b5563;
 }
 
+main {
+  padding-bottom: 7rem;
+}
+main .intro {
+  text-align: center;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.intro h1,
+section h2 {
+  color: var(--primary-color);
+}
+
+.intro p {
+  color: var(--darkslategray);
+}
+
 .skills {
   display: flex;
   flex-direction: column;
@@ -61,6 +78,11 @@
 }
 
 @media (min-width: 1024px) {
+  .intro p {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .skills {
     flex-direction: row;
     justify-content: space-evenly;
