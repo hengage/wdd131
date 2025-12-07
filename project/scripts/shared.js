@@ -14,10 +14,12 @@
 function loadHeader() {
     const header = document.querySelector('header');
     header.innerHTML = `
-        <img src="images/henry-chizoba-logo.png" alt="Logo"
-            width="100"
-            height="100"
-            loading="lazy">
+        <a href="home.html" class="logo-link">
+            <img src="images/henry-chizoba-logo.png" alt="Logo"
+                width="100"
+                height="100"
+                loading="lazy">
+        </a>
 
         <nav class="nav" styl="border: 2px solid blue">
             <button class="nav-toggle" aria-label="Toggle navigation"
@@ -70,12 +72,14 @@ function loadFooter() {
     const footer = document.querySelector('footer');
     if (footer) {
         footer.innerHTML = `
+        <div>
             <ul class="social-links">
                 <li><a href="https://github.com/hengage" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
                 <li><a href="https://linkedin.com/in/henrychizoba" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
                 <li><a href="mailto:henrychizobaudeh@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
             </ul>
             <p> ${new Date().getFullYear()} Henry Chizoba Udeh</p>
+            </div>
         `;
     }
 }
