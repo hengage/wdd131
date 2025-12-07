@@ -25,6 +25,8 @@ section h2 {
 
 .intro p {
   color: var(--darkslategray);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .skills {
@@ -74,6 +76,10 @@ section h2 {
 }
 
 @media (min-width: 768px) {
+  .intro p {
+    width: 75%;
+  }
+
   .skills .container ul {
     column-gap: 0.4rem;
   }
@@ -93,12 +99,6 @@ section h2 {
 }
 
 @media (min-width: 1024px) {
-  .intro p {
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .skills {
     width: 80%;
   }
