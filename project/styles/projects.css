@@ -1,0 +1,88 @@
+:root {
+  /* Color Scheme */
+  --primary-color: #001f3f;
+  --accent-color: #06b6d4;
+  --background-color: #f3f4f6;
+  --text-color: #1f2937;
+  --text-light: #ffffff;
+  --darkslategray: #4b5563;
+  --border-gray: #e5e7eb;
+}
+
+.intro .container {
+  text-align: center;
+  padding: 3.9rem 1rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro h1 {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.intro p {
+  color: var(--darkslategray);
+  font-size: 1.2rem;
+}
+
+.projects {
+  padding-top: 1.2rem;
+  padding-bottom: 7rem;
+}
+
+.projects .container {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(150px, 1fr));
+  column-gap: 3rem;
+  row-gap: 2rem;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects .project {
+  border: 3px solid var(--border-gray);
+  border-radius: 0.5rem;
+  width: 90%;
+}
+
+.projects .project img {
+  width: 100%;
+  height: 200px;
+  object-fit: fill;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.projects .project .content {
+  padding: 1.6rem 1rem;
+  min-height: 150px;
+}
+
+.projects .project .content p {
+  color: var(--darkslategray);
+}
+
+.projects .project .content a {
+  color: var(--primary-color);
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects .container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 320px));
+  }
+
+  .intro .container {
+    text-align: left;
+    padding-top: 1.9rem;
+  }
+}
