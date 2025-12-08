@@ -6,6 +6,7 @@
   --text-light: #ffffff;
   --darkslategray: #4b5563;
   --border-gray: #e5e7eb;
+  --error-color: #f04134;
 }
 
 .intro .container {
@@ -109,6 +110,10 @@
   color: var(--darkslategray);
   font-weight: 500;
   font-size: 0.95rem;
+}
+
+.form-group .required-sign {
+  color: var(--error-color);
 }
 
 .form-group input,
