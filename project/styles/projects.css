@@ -46,6 +46,7 @@
   border: 3px solid var(--border-gray);
   border-radius: 0.5rem;
   width: 90%;
+  box-shadow: 5px 9px 0.9rem var(--border-gray);
 }
 
 .projects .project img {
@@ -84,6 +85,10 @@
   .intro .container {
     text-align: left;
     padding-top: 1.9rem;
+  }
+
+  .projects .project {
+    box-shadow: 10px 9px 0.9rem var(--border-gray);
   }
 
   .projects .project .content {
