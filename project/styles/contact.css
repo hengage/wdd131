@@ -1,0 +1,227 @@
+:root {
+  --primary-color: #001f3f;
+  --accent-color: #06b6d4;
+  --background-color: #f3f4f6;
+  --text-color: #1f2937;
+  --text-light: #ffffff;
+  --darkslategray: #4b5563;
+  --border-gray: #e5e7eb;
+}
+
+.intro .container {
+  text-align: center;
+  padding: 3.9rem 1rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Contact Page Styles */
+.contact {
+  padding: 2rem 1rem 5rem;
+  background-color: var(--background-color);
+}
+
+.contact .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-gray);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.contact-card i {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover i {
+  transform: scale(1.1);
+}
+
+.contact-card h3 {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.contact-card a {
+  color: var(--darkslategray);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  word-break: break-word;
+}
+
+.contact-card a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.contact-form {
+  background: white;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-gray);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 0 auto 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.75rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--darkslategray);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  border: 1px solid var(--border-gray);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f9fafb;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+  background-color: white;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Form Status Messages */
+.form-status {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+  display: none;
+}
+
+.form-status.success {
+  background-color: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+  display: block;
+}
+
+.form-status.error {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  display: block;
+}
+
+.submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.2);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Submit Button Loading Animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fa-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    padding-top: 5rem;
+    padding-bottom: 11rem;
+  }
+
+  .contact-methods {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-form {
+    padding: 3rem;
+  }
+
+  .submit-btn {
+    width: auto;
+    margin-left: auto;
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-form {
+    max-width: 650px;
+    padding: 2.5rem;
+  }
+}
