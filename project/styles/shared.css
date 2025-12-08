@@ -1,3 +1,6 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&family=Fira+Code:wght@400;500&display=swap");
+
 :root {
   /* Color Scheme */
   --primary-color: #001f3f; /* Classic dark navy */
@@ -7,6 +10,11 @@
   --text-light: #ffffff; /* White text for dark backgrounds */
   --darkslategray: #4b5563;
   --border-gray: #e5e7eb;
+
+  /* Typography */
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Roboto", sans-serif;
+  --font-code: "Fira Code", monospace;
 }
 
 * {
@@ -107,6 +115,65 @@ footer p {
 
 footer ul i:hover {
   color: var(--accent-color);
+}
+
+/* Typography Utilities */
+.font-heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.font-body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* Text Sizes */
+.text-xs {
+  font-size: 0.75rem;
+} /* 12px */
+.text-sm {
+  font-size: 0.875rem;
+} /* 14px */
+.text-base {
+  font-size: 1rem;
+} /* 16px */
+.text-lg {
+  font-size: 1.125rem;
+} /* 18px */
+.text-xl {
+  font-size: 1.25rem;
+} /* 20px */
+.text-2xl {
+  font-size: 1.5rem;
+} /* 24px */
+.text-3xl {
+  font-size: 1.875rem;
+} /* 30px */
+.text-4xl {
+  font-size: 2.25rem;
+} /* 36px */
+.text-5xl {
+  font-size: 3rem;
+} /* 48px */
+
+/* Font Weights (for both headings and body) */
+.font-light {
+  font-weight: 300;
+}
+.font-normal {
+  font-weight: 400;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.font-bold {
+  font-weight: 700;
 }
 
 /* Space utilities */
