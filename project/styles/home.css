@@ -100,7 +100,7 @@ h1 {
 .about-me .about p {
   font-size: 1.3rem;
   font-weight: 100;
-  color: var(--darkslategray);
+  color: var(--text-color);
 }
 
 .about-me h2 {

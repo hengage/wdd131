@@ -228,7 +228,7 @@ footer ul i:hover {
 
   /* Style the CV button differently */
   .nav-menu .cta-button {
-    background: var(--accent-color);
+    background: var(--primary-color);
     color: var(--text-light);
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -236,7 +236,7 @@ footer ul i:hover {
   }
 
   .nav-menu .cta-button:hover {
-    background: var(--primary-color);
+    background: var(--accent-color);
     color: var(--text-light);
   }
 
