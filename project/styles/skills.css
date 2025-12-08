@@ -46,7 +46,7 @@ section h2 {
   border: 1px solid var(--border-gray);
   border-radius: 1rem;
   padding: 1rem 0 2rem;
-  box-shadow: 0 0 0.2rem var(--accent-color);
+  box-shadow: 3px 3px 0.4rem var(--border-gray);
 }
 
 .skills .container h2 {
@@ -69,7 +69,7 @@ section h2 {
 }
 
 .skills .container ul li {
-  background-color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--primary-color) 10%, white);
   width: fit-content;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -101,6 +101,10 @@ section h2 {
 @media (min-width: 1024px) {
   .skills {
     width: 80%;
+  }
+
+  .skills .container div {
+    box-shadow: 5px 5px 0.4rem var(--border-gray);
   }
 }
 

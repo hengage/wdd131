@@ -84,7 +84,7 @@ h1 {
 /* About Me Styles */
 .about-me {
   background-color: var(--background-color);
-  padding: 4rem 1rem;
+  padding: 4rem 1rem 8rem;
 }
 
 .about-me .about {
@@ -145,7 +145,6 @@ h1 {
 
   .intro .container div {
     width: 400px;
-    /* height: 250px; */
     align-items: self-start;
   }
 
@@ -156,7 +155,15 @@ h1 {
 
   .intro .action-buttons {
     width: 40%;
-    /* margin: 0 auto; */
+  }
+
+  .about-me {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .about-me ul {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -173,6 +180,23 @@ h1 {
     width: 550px;
   }
 
+  .action-buttons .contact-me:hover {
+    box-shadow: 3px 3px 0.4rem var(--border-gray);
+  }
+
+  .action-buttons .contact-me:hover,
+  .action-buttons .view-my-work:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* About Me Styles */
+  .about-me {
+    padding-bottom: 10rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+
   .about-me .about {
     padding: 0 4rem;
     text-align: center;
@@ -183,7 +207,7 @@ h1 {
   }
 
   .about-me ul {
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
     padding: 0 3rem;
     gap: 1.5rem;
     max-width: 1200px;

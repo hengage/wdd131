@@ -102,4 +102,10 @@
     bottom: 1rem;
     left: 1rem;
   }
+
+  .projects .project .project-link a:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+    color: var(--accent-color);
+  }
 }
