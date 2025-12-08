@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WDD 131 Project | Portfolio - Contact" />
+    <meta name="author" content="Henry Chizoba Udeh" />
+    <title>WDD 131 Project - Contact</title>
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="scripts/shared.js" defer></script>
+    <script src="scripts/contact.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <!-- Header content will be loaded by shared.js -->
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="container space-y-4 md:space-y-2.5">
+          <h1 class="font-heading">Get In Touch</h1>
+          <p class="font-body">
+            Have a question or want to work together? Feel free to reach out!
+          </p>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <div class="contact-methods">
+            <div class="contact-card">
+              <i class="fas fa-envelope"></i>
+              <h3>Email</h3>
+              <a href="mailto:henrychizobaudeh@gmail.com"
+                >henrychizobaudeh@gmail.com</a
+              >
+            </div>
+
+            <div class="contact-card">
+              <i class="fab fa-linkedin"></i>
+              <h3>LinkedIn</h3>
+              <a href="https://linkedin.com/in/henrychizoba" target="_blank"
+                >linkedin.com/in/henrychizoba</a
+              >
+            </div>
+
+            <div class="contact-card">
+              <i class="fab fa-github"></i>
+              <h3>GitHub</h3>
+              <a href="https://github.com/hengage" target="_blank"
+                >github.com/hengage</a
+              >
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <h2 class="font-heading font-normal">
+              Or just send me a message directly, I'll get it as an email
+            </h2>
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/myzrdwwl"
+              method="POST"
+              styl="border: 1px dashed darkblue"
+            >
+              <div class="form-group">
+                <label for="name">Name (Optional)</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email"
+                  >Email<span class="required-sign">*</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message"
+                  >Message<span class="required-sign">*</span></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Your message here..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                <span>Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+            <div id="form-status" class="form-status"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Footer content will be loaded by shared.js -->
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,226 @@
+:root {
+  /* Color Scheme */
+  --primary-color: #001f3f; /* Classic dark navy */
+  --accent-color: #06b6d4; /* Bright cyan */
+  --background-color: #f3f4f6; /* Light gray */
+  --text-color: #1f2937; /* Dark gray for text */
+  --text-light: #ffffff; /* White text for dark backgrounds */
+  --border-gray: #e5e7eb;
+  --darkslategray: #4b5563;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.intro div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.intro div:nth-child(1) {
+  padding: 4rem 1rem;
+}
+
+.intro div:nth-child(2) {
+  padding: 0 1rem;
+}
+
+.intro img {
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--primary-color);
+}
+
+.intro .title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.intro .description {
+  width: 90%;
+  color: var(--darkslategray);
+}
+
+.intro .action-buttons {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.intro .action-buttons a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.action-buttons .view-my-work {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 1rem 1.5rem;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.action-buttons .contact-me {
+  border: 1px solid var(--accent-color);
+  color: var(--primary-color);
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  width: 100%;
+}
+
+/* About Me Styles */
+.about-me {
+  background-color: var(--background-color);
+  padding: 4rem 1rem 8rem;
+}
+
+.about-me .about {
+  text-align: center;
+}
+
+.about-me .about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-me .about p {
+  font-size: 1.3rem;
+  font-weight: 100;
+  color: var(--text-color);
+}
+
+.about-me h2 {
+  font-size: 2.2rem;
+  font-weight: 200;
+  line-height: 1.2;
+  color: var(--primary-color);
+}
+
+.about-me ul {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+.about-me li {
+  list-style: none;
+  padding: 2rem 1rem;
+  background-color: var(--text-light);
+  border: 1px solid var(--border-gray);
+  border-radius: 8px;
+}
+
+.about-me ul li h3 {
+  font-weight: 200;
+  font-size: 1.3rem;
+}
+
+.about-me li p {
+  font-size: 1rem;
+  color: var(--darkslategray);
+}
+
+@media (min-width: 768px) {
+  main {
+    margin-top: 2rem;
+  }
+  .intro .container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .intro .container div {
+    width: 400px;
+    align-items: self-start;
+  }
+
+  .intro img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .intro .action-buttons {
+    width: 40%;
+  }
+
+  .about-me {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .about-me ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    margin-top: 3rem;
+  }
+
+  .intro .container {
+    gap: 6rem;
+  }
+
+  .intro .container div {
+    width: 550px;
+  }
+
+  .action-buttons .contact-me:hover {
+    box-shadow: 3px 3px 0.4rem var(--border-gray);
+  }
+
+  .action-buttons .contact-me:hover,
+  .action-buttons .view-my-work:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* About Me Styles */
+  .about-me {
+    padding-bottom: 10rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+
+  .about-me .about {
+    padding: 0 4rem;
+    text-align: center;
+  }
+
+  .about p {
+    padding: 0 5.2rem;
+  }
+
+  .about-me ul {
+    /* grid-template-columns: repeat(2, 1fr); */
+    padding: 0 3rem;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about-me ul li {
+    flex-basis: 5%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .intro .container div {
+    width: 650px;
+  }
+}

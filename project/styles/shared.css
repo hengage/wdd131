@@ -1,0 +1,418 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&family=Fira+Code:wght@400;500&display=swap");
+
+:root {
+  /* Color Scheme */
+  --primary-color: #001f3f; /* Classic dark navy */
+  --accent-color: #06b6d4; /* Bright cyan */
+  --background-color: #f3f4f6; /* Light gray */
+  --text-color: #1f2937; /* Dark gray for text */
+  --text-light: #ffffff; /* White text for dark backgrounds */
+  --darkslategray: #4b5563;
+  --border-gray: #e5e7eb;
+
+  /* Typography */
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Roboto", sans-serif;
+  --font-code: "Fira Code", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Header and Navigation styling*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding-right: 1rem;
+}
+
+/* Default state */
+.nav-icon {
+  display: block;
+}
+
+.close-icon {
+  display: none;
+}
+
+/* When nav is active */
+.active .nav-icon {
+  display: none;
+}
+
+.active .close-icon {
+  display: block;
+}
+
+.nav-menu {
+  display: none;
+}
+
+.nav {
+  position: relative; /* Makes this the positioning context for absolute children */
+}
+
+.nav-menu {
+  display: none;
+  background: var(--primary-color);
+  min-width: 250px;
+  position: absolute;
+  top: 3.5rem;
+  right: -0.2rem;
+  z-index: 1000;
+}
+
+/* When menu is active */
+.active .nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
+  padding: 2rem 1rem;
+}
+
+.nav-menu a {
+  color: var(--text-light);
+}
+
+/* Footer styling */
+
+footer {
+  background-color: var(--primary-color);
+  padding: 3rem 0;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+footer ul {
+  display: flex;
+  gap: 2rem;
+}
+
+footer ul i,
+footer p {
+  font-size: 1.5rem;
+  color: var(--border-gray);
+}
+
+footer ul i:hover {
+  color: var(--accent-color);
+}
+
+/* Typography Utilities */
+.font-heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.font-body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* Text Sizes */
+.text-xs {
+  font-size: 0.75rem;
+} /* 12px */
+.text-sm {
+  font-size: 0.875rem;
+} /* 14px */
+.text-base {
+  font-size: 1rem;
+} /* 16px */
+.text-lg {
+  font-size: 1.125rem;
+} /* 18px */
+.text-xl {
+  font-size: 1.25rem;
+} /* 20px */
+.text-2xl {
+  font-size: 1.5rem;
+} /* 24px */
+.text-3xl {
+  font-size: 1.875rem;
+} /* 30px */
+.text-4xl {
+  font-size: 2.25rem;
+} /* 36px */
+.text-5xl {
+  font-size: 3rem;
+} /* 48px */
+
+/* Font Weights (for both headings and body) */
+.font-light {
+  font-weight: 300;
+}
+.font-normal {
+  font-weight: 400;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.font-bold {
+  font-weight: 700;
+}
+
+/* Space utilities */
+.space-y-0 > * + * {
+  margin-top: 0;
+} /* 0px */
+.space-y-0\.5 > * + * {
+  margin-top: 0.125rem;
+} /* 2px */
+.space-y-1 > * + * {
+  margin-top: 0.25rem;
+} /* 4px */
+.space-y-1\.5 > * + * {
+  margin-top: 0.375rem;
+} /* 6px */
+.space-y-2 > * + * {
+  margin-top: 0.5rem;
+} /* 8px */
+.space-y-2\.5 > * + * {
+  margin-top: 0.625rem;
+} /* 10px */
+.space-y-3 > * + * {
+  margin-top: 0.75rem;
+} /* 12px */
+.space-y-4 > * + * {
+  margin-top: 1rem;
+} /* 16px */
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+} /* 24px */
+.space-y-8 > * + * {
+  margin-top: 2rem;
+} /* 32px */
+.space-y-10 > * + * {
+  margin-top: 2.5rem;
+} /* 40px */
+.space-y-12 > * + * {
+  margin-top: 3rem;
+} /* 48px */
+.space-y-16 > * + * {
+  margin-top: 4rem;
+} /* 64px */
+.space-y-20 > * + * {
+  margin-top: 5rem;
+} /* 80px */
+.space-y-24 > * + * {
+  margin-top: 6rem;
+} /* 96px */
+.space-y-32 > * + * {
+  margin-top: 8rem;
+} /* 128px */
+.space-y-40 > * + * {
+  margin-top: 10rem;
+} /* 160px */
+.space-y-48 > * + * {
+  margin-top: 12rem;
+} /* 192px */
+.space-y-56 > * + * {
+  margin-top: 14rem;
+} /* 224px */
+.space-y-64 > * + * {
+  margin-top: 16rem;
+} /* 256px */
+.space-y-72 > * + * {
+  margin-top: 18rem;
+} /* 288px */
+.space-y-80 > * + * {
+  margin-top: 20rem;
+} /* 320px */
+.space-y-96 > * + * {
+  margin-top: 24rem;
+} /* 384px */
+
+/* Medium (md) - 768px */
+@media (min-width: 768px) {
+  header {
+    padding: 0 3rem;
+  }
+
+  .nav-toggle {
+    display: none; /* Hide the mobile menu toggle button on desktop */
+  }
+
+  .nav-menu {
+    position: static; /* Reset absolute positioning */
+    display: flex; /* Override the display: none */
+    flex-direction: row;
+    align-items: center;
+    gap: 3.2rem;
+    background: transparent;
+    padding: 0;
+    min-width: auto;
+  }
+
+  .nav-menu a {
+    color: var(--text-color);
+    padding: 0.5rem 0;
+    position: relative;
+  }
+
+  .nav-menu a:hover {
+    color: var(--accent-color);
+  }
+
+  .nav-menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+  }
+
+  .nav-menu a:hover::after {
+    width: 100%;
+  }
+
+  /* Style the CV button differently */
+  .nav-menu .cta-button {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+
+  .nav-menu .cta-button:hover {
+    background: var(--accent-color);
+    color: var(--text-light);
+  }
+
+  /* Space Utilities */
+  .md\:space-y-0 > * + * {
+    margin-top: 0;
+  }
+  .md\:space-y-0\.5 > * + * {
+    margin-top: 0.125rem;
+  }
+  .md\:space-y-1 > * + * {
+    margin-top: 0.25rem;
+  }
+  .md\:space-y-1\.5 > * + * {
+    margin-top: 0.375rem;
+  }
+  .md\:space-y-2 > * + * {
+    margin-top: 0.5rem;
+  }
+  .md\:space-y-2\.5 > * + * {
+    margin-top: 0.625rem;
+  }
+  .md\:space-y-3 > * + * {
+    margin-top: 0.75rem;
+  }
+  .md\:space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+  .md\:space-y-5 > * + * {
+    margin-top: 1.25rem;
+  }
+  .md\:space-y-6 > * + * {
+    margin-top: 1.5rem;
+  }
+  .md\:space-y-8 > * + * {
+    margin-top: 2rem;
+  }
+  .md\:space-y-10 > * + * {
+    margin-top: 2.5rem;
+  }
+  .md\:space-y-12 > * + * {
+    margin-top: 3rem;
+  }
+  .md\:space-y-16 > * + * {
+    margin-top: 4rem;
+  }
+  .md\:space-y-20 > * + * {
+    margin-top: 5rem;
+  }
+  .md\:space-y-24 > * + * {
+    margin-top: 6rem;
+  }
+  .md\:space-y-32 > * + * {
+    margin-top: 8rem;
+  }
+}
+
+/* Large (lg) - 1024px */
+@media (min-width: 1024px) {
+  /* Space Utilities */
+  .lg\:space-y-0 > * + * {
+    margin-top: 0;
+  }
+  .lg\:space-y-0\.5 > * + * {
+    margin-top: 0.125rem;
+  }
+  .lg\:space-y-1 > * + * {
+    margin-top: 0.25rem;
+  }
+  .lg\:space-y-1\.5 > * + * {
+    margin-top: 0.375rem;
+  }
+  .lg\:space-y-2 > * + * {
+    margin-top: 0.5rem;
+  }
+  .lg\:space-y-2\.5 > * + * {
+    margin-top: 0.625rem;
+  }
+  .lg\:space-y-3 > * + * {
+    margin-top: 0.75rem;
+  }
+  .lg\:space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+  .lg\:space-y-5 > * + * {
+    margin-top: 1.25rem;
+  }
+  .lg\:space-y-6 > * + * {
+    margin-top: 1.5rem;
+  }
+  .lg\:space-y-8 > * + * {
+    margin-top: 2rem;
+  }
+  .lg\:space-y-10 > * + * {
+    margin-top: 2.5rem;
+  }
+  .lg\:space-y-12 > * + * {
+    margin-top: 3rem;
+  }
+  .lg\:space-y-16 > * + * {
+    margin-top: 4rem;
+  }
+  .lg\:space-y-20 > * + * {
+    margin-top: 5rem;
+  }
+  .lg\:space-y-24 > * + * {
+    margin-top: 6rem;
+  }
+  .lg\:space-y-32 > * + * {
+    margin-top: 8rem;
+  }
+}
